@@ -19,5 +19,5 @@ public class NumberTotal {
 /* Before running the code, type your answer below.
 
 TODO: Write output here
-
+11 1 2 3
 Then, click the green play button to check your work. */
