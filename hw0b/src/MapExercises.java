@@ -1,3 +1,6 @@
+import edu.princeton.cs.algs4.In;
+
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -7,7 +10,11 @@ public class MapExercises {
      */
     public static Map<Character, Integer> letterToNum() {
         // TODO: Fill in this function.
-        return null;
+        Map<Character, Integer> alphabet = new HashMap<>();
+        for(int i = 0; i < 26; i++){
+            alphabet.put((char)('a' + i), i + 1);
+        }
+        return alphabet;
     }
 
     /** Returns a map from the integers in the list to their squares. For example, if the input list
@@ -15,12 +22,25 @@ public class MapExercises {
      */
     public static Map<Integer, Integer> squares(List<Integer> nums) {
         // TODO: Fill in this function.
-        return null;
+        Map<Integer, Integer> squares = new HashMap<>();
+        for(int i : nums){
+            squares.put(i, i * i);
+        }
+        return squares;
     }
 
     /** Returns a map of the counts of all words that appear in a list of words. */
     public static Map<String, Integer> countWords(List<String> words) {
         // TODO: Fill in this function.
-        return null;
+        Map<String, Integer> countWords = new HashMap<>();
+        for(String word : words){
+            if(countWords.containsKey(word)){
+                countWords.put(word, countWords.get(word) + 1);
+            }
+            else{
+                countWords.put(word, 1);
+            }
+        }
+        return countWords;
     }
 }
